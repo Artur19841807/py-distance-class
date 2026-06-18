@@ -19,7 +19,7 @@ class Distance:
         return NotImplemented
 
     def __radd__(self, other: int | float) -> Distance:
-        return self.add(other)
+        return self.__add__(other)
 
     def __iadd__(self, other: Distance | int | float) -> Distance:
         if isinstance(other, Distance):
@@ -36,7 +36,7 @@ class Distance:
         return NotImplemented
 
     def __rmul__(self, other: int | float) -> Distance:
-        return self.mul(other)
+        return self.__mul__(other)
 
     def __truediv__(self, other: int | float) -> Distance:
         if isinstance(other, (int, float)):
